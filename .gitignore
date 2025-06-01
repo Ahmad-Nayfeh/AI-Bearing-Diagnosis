@@ -1,0 +1,16 @@
+# Virtual Environment
+ai_bearing_env/
+*.pyc
+__pycache__/
+.DS_Store
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Data files (if they are very large and you plan to instruct users to download them separately)
+# data/raw/
+# data/processed/
+
+# IDE specific files
+.vscode/
+.idea/
