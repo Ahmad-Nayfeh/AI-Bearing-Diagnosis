@@ -49,15 +49,10 @@ def load_artifacts():
     """Loads the trained model and scaler."""
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = Cnn1D(num_classes=4).to(device)
-    
-    # --- CORRECTED FILE PATHS ---
-    # Provide the path relative to the repository root
-    model_path = 'models/best_1d_cnn_model.pth'
-    scaler_path = 'models/standard_scaler.joblib'
-    
-    model.load_state_dict(torch.load(model_path, map_location=device))
+    # NOTE: Using the user-specified model name
+    model.load_state_dict(torch.load('best_1d_cnn_model.pth', map_location=device))
     model.eval()
-    scaler = joblib.load(scaler_path)
+    scaler = joblib.load('standard_scaler.joblib')
     return model, scaler, device
 
 # --- 2. Advanced Prediction Function ---
