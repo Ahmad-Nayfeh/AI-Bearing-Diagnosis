@@ -170,3 +170,14 @@ if uploaded_file is not None:
 
 else:
     st.info("Awaiting file upload...")
+
+# Add footer
+st.markdown("---")
+st.markdown("""
+<div style='text-align: center'>
+    <p><strong>Developed by Ahmad Nayfeh</strong></p>
+    <p>🔗 <a href='https://github.com/Ahmad-Nayfeh'>GitHub</a> | 
+    💼 <a href='https://www.linkedin.com/in/ahmad-nayfeh2000/'>LinkedIn</a> | 
+    📧 ahmadnayfeh2000@gmail.com</p>
+</div>
+""", unsafe_allow_html=True)
